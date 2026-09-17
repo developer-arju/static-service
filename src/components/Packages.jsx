@@ -6,7 +6,8 @@ import {
   Calendar, 
   ShieldAlert, 
   Droplets,
-  HeartPulse
+  HeartPulse,
+  Home
 } from 'lucide-react';
 import { healthPackages } from '../data/packagesData';
 
@@ -17,15 +18,15 @@ export default function Packages({ onSelectPackageForBooking }) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-100/70 border border-teal-200 text-teal-800 text-xs font-semibold mb-3">
-            <HeartPulse className="w-3.5 h-3.5 text-teal-600" />
-            <span>Preventive Healthcare Packages</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold mb-3">
+            <HeartPulse className="w-3.5 h-3.5 text-amber-600" />
+            <span>Preventive Healthcare & Lab Checkups</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Curated Health Checkup Packages
+          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            DiaMedicare Health Checkup Packages
           </h2>
           <p className="mt-3 text-base sm:text-lg text-slate-600">
-            Comprehensive multi-parameter packages formulated by senior pathologists to detect hidden health risks before symptoms arise.
+            Carefully curated diagnostic packages for early detection of diabetes, cholesterol abnormalities, kidney risks, and general vitality.
           </p>
         </div>
 
@@ -38,14 +39,14 @@ export default function Packages({ onSelectPackageForBooking }) {
                 key={pkg.id}
                 className={`relative rounded-3xl transition-all duration-300 flex flex-col justify-between ${
                   isPopular 
-                    ? 'bg-white border-2 border-teal-600 shadow-xl shadow-teal-900/10 lg:-translate-y-3 z-10' 
+                    ? 'bg-white border-2 border-amber-500 shadow-xl shadow-amber-900/10 lg:-translate-y-3 z-10' 
                     : 'bg-white border border-slate-200 shadow-md hover:shadow-xl'
                 } p-6 sm:p-8`}
               >
                 {/* Popular Ribbon */}
                 {isPopular && (
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-teal-700 to-teal-600 text-white text-xs font-bold uppercase tracking-wider py-1 px-4 rounded-full shadow-md flex items-center gap-1.5">
+                    <span className="bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-xs font-black uppercase tracking-wider py-1 px-4 rounded-full shadow-md flex items-center gap-1.5">
                       <Sparkles className="w-3.5 h-3.5" />
                       {pkg.badge}
                     </span>
@@ -55,15 +56,15 @@ export default function Packages({ onSelectPackageForBooking }) {
                 <div>
                   {/* Top package info */}
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold text-teal-800 bg-teal-50 px-2.5 py-1 rounded-lg border border-teal-100">
-                      {pkg.testsCount} Parameters Covered
+                    <span className="text-xs font-bold text-slate-800 bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200">
+                      {pkg.testsCount} Parameters
                     </span>
-                    <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+                    <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
                       {pkg.discount}
                     </span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 mb-1">
+                  <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-1">
                     {pkg.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-500 mb-6 leading-relaxed">
@@ -71,7 +72,7 @@ export default function Packages({ onSelectPackageForBooking }) {
                   </p>
 
                   {/* Pricing Box */}
-                  <div className="bg-slate-50 rounded-2xl p-4 mb-6 border border-slate-100">
+                  <div className="bg-slate-50 rounded-2xl p-4 mb-6 border border-slate-200/80">
                     <div className="flex items-baseline gap-2">
                       <span className="text-3xl sm:text-4xl font-black text-slate-900">
                         ₹{pkg.price}
@@ -97,7 +98,7 @@ export default function Packages({ onSelectPackageForBooking }) {
                   </div>
 
                   {/* Fasting Requirement */}
-                  <div className="flex items-center gap-2 text-xs text-amber-800 bg-amber-50/80 p-2.5 rounded-xl border border-amber-200/70 mb-6">
+                  <div className="flex items-center gap-2 text-xs text-amber-900 bg-amber-50/90 p-2.5 rounded-xl border border-amber-200 mb-6">
                     <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0" />
                     <span>Requirement: <strong>{pkg.fasting}</strong></span>
                   </div>
@@ -105,12 +106,12 @@ export default function Packages({ onSelectPackageForBooking }) {
                   {/* Key Tests Included List */}
                   <div>
                     <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
-                      Tests Included ({pkg.testsCount})
+                      Tests Included
                     </h4>
                     <ul className="space-y-2.5 mb-8">
                       {pkg.keyTests.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
-                          <div className="w-4 h-4 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center shrink-0 mt-0.5">
+                          <div className="w-4 h-4 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 mt-0.5">
                             <Check className="w-2.5 h-2.5 stroke-[3]" />
                           </div>
                           <span className="leading-snug">{item}</span>
@@ -125,8 +126,8 @@ export default function Packages({ onSelectPackageForBooking }) {
                   onClick={() => onSelectPackageForBooking(pkg.title)}
                   className={`w-full py-3.5 px-4 rounded-2xl font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 shadow-sm ${
                     isPopular
-                      ? 'bg-teal-700 hover:bg-teal-800 text-white shadow-teal-800/20 hover:shadow-md'
-                      : 'bg-slate-900 hover:bg-teal-700 text-white hover:shadow-md'
+                      ? 'bg-amber-500 hover:bg-amber-600 text-slate-950 shadow-amber-500/20 hover:shadow-md'
+                      : 'bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white hover:shadow-md'
                   }`}
                 >
                   <Calendar className="w-4 h-4" />
@@ -137,25 +138,26 @@ export default function Packages({ onSelectPackageForBooking }) {
           })}
         </div>
 
-        {/* Home Collection Callout Banner */}
-        <div className="mt-12 bg-teal-800 text-white rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg shadow-teal-900/10">
+        {/* Home Sample Collection Callout Banner */}
+        <div className="mt-12 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-amber-500/30 shadow-xl">
           <div className="space-y-2 text-center md:text-left">
-            <span className="text-teal-200 text-xs uppercase font-bold tracking-widest">
-              Doorstep Convenience
+            <span className="text-amber-400 text-xs uppercase font-extrabold tracking-widest flex items-center justify-center md:justify-start gap-1.5">
+              <Home className="w-3.5 h-3.5" />
+              <span>Doorstep Home Blood Collection</span>
             </span>
-            <h3 className="text-xl sm:text-2xl font-bold">
-              Need free home sample collection for these packages?
+            <h3 className="text-xl sm:text-2xl font-bold text-white">
+              Need home blood collection in Aimcombu or along Pala-Thodupuzha route?
             </h3>
-            <p className="text-sm text-teal-100 max-w-xl">
-              Our phlebotomist visits with temperature-controlled cold kits, barcoded vials, and sterile one-time needles at your preferred morning hour.
+            <p className="text-sm text-slate-300 max-w-xl">
+              Trained phlebotomists visit with vacuum tubes at your preferred morning hour. Fast digital reports sent via WhatsApp.
             </p>
           </div>
 
           <button
-            onClick={() => onSelectPackageForBooking('Comprehensive Full Body (Home Collection)')}
-            className="whitespace-nowrap bg-white hover:bg-teal-50 text-teal-800 font-bold px-6 py-3 rounded-xl shadow-md transition-colors text-sm flex items-center gap-2"
+            onClick={() => onSelectPackageForBooking('Home Blood Collection Request')}
+            className="whitespace-nowrap bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-6 py-3 rounded-xl shadow-md transition-colors text-sm flex items-center gap-2 shrink-0"
           >
-            <span>Book Home Visit</span>
+            <span>Request Home Visit</span>
           </button>
         </div>
 
@@ -163,4 +165,3 @@ export default function Packages({ onSelectPackageForBooking }) {
     </section>
   );
 }
-

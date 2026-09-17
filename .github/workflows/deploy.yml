@@ -40,3 +40,4 @@ jobs:
           branch: gh-pages # Target production branch (only contains dist files)
           folder: dist     # Folder to push to the branch
           clean: true      # Automatically remove obsolete files from production branch
+

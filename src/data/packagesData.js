@@ -1,144 +1,136 @@
 export const healthPackages = [
   {
     id: "basic-wellness",
-    title: "Basic Wellness Check",
-    subtitle: "Essential baseline assessment for young adults and routine annual checkups.",
-    price: 999,
-    originalPrice: 1999,
-    discount: "50% OFF",
-    testsCount: 32,
-    tat: "Within 8 Hours",
+    title: "Basic Health Checkup",
+    subtitle: "Essential baseline blood & vitals screening for routine checkups and young adults.",
+    price: 799,
+    originalPrice: 1500,
+    discount: "47% OFF",
+    testsCount: 28,
+    tat: "Within 6 Hours",
     fasting: "8-10 Hours Fasting",
     sampleType: "Blood & Urine",
     popular: false,
-    colorScheme: "slate",
-    badge: "Routine Essential",
+    badge: "Routine Care",
     keyTests: [
       "Complete Blood Count (CBC - 24 Parameters)",
-      "Blood Sugar Fasting (Glucose)",
-      "Lipid Profile Basic (Total Chol, Triglycerides)",
-      "Kidney Screening (Creatinine & Urea)",
-      "Liver Health Screen (SGPT, SGOT)",
-      "Urine Routine & Microscopic (10 Parameters)",
-      "Free Doctor Consultation Report Analysis"
+      "Fasting Blood Sugar (Glucose)",
+      "Serum Creatinine (Kidney Screen)",
+      "Total Cholesterol & Triglycerides",
+      "Urine Routine Examination",
+      "Free Doctor Consultation & Blood Pressure Check"
     ]
   },
   {
-    id: "comprehensive-full-body",
-    title: "Comprehensive Full Body",
-    subtitle: "Our gold standard full-body diagnostic suite covering all vital organs and key vitamins.",
-    price: 2499,
-    originalPrice: 5200,
-    discount: "52% OFF",
-    testsCount: 68,
-    tat: "Same Day (10 Hours)",
+    id: "diabetic-cardiac",
+    title: "Diabetic & Cardiac Wellness",
+    subtitle: "Specially designed for sugar control, heart rhythm monitoring, and lipid evaluation.",
+    price: 1499,
+    originalPrice: 2800,
+    discount: "46% OFF",
+    testsCount: 42,
+    tat: "Same Day",
     fasting: "10-12 Hours Fasting",
-    sampleType: "Blood & Urine",
+    sampleType: "Blood, Urine & ECG",
     popular: true,
-    colorScheme: "teal",
     badge: "Most Popular",
     keyTests: [
-      "Complete Blood Count (CBC with ESR - 24 Params)",
-      "Extended Lipid Profile (8 Parameters)",
-      "Complete Liver Function Test (LFT - 11 Params)",
-      "Complete Kidney Function Test (KFT - 9 Params)",
-      "Thyroid Profile Total (T3, T4, TSH)",
-      "HbA1c Diabetic Control + Average Glucose",
-      "Vitamin D3 (25-OH) & Vitamin B12 Levels",
-      "Iron Deficiency Panel & Ferritin",
-      "Digital ECG (At-Center) or Home Sample Collection",
-      "Complimentary Pathologist Review & Summary"
+      "HbA1c (3-Month Average Blood Sugar)",
+      "Fasting & Post-Prandial Blood Sugar",
+      "Complete Lipid Profile (8 Parameters)",
+      "Computerized 12-Lead ECG",
+      "Kidney Function Test (Creatinine, Urea)",
+      "Liver Enzymes Screen (SGPT)",
+      "Doctor Review & Medication Counseling"
     ]
   },
   {
-    id: "executive-health",
-    title: "Executive Health & Cardiac",
-    subtitle: "In-depth preventive screening designed for 40+ adults with cardiovascular and metabolic risk markers.",
-    price: 4299,
-    originalPrice: 8500,
-    discount: "49% OFF",
-    testsCount: 85,
-    tat: "12-14 Hours",
+    id: "comprehensive-executive",
+    title: "Comprehensive Full Body Panel",
+    subtitle: "Master screening covering all vital organs, thyroid, liver, kidney, and cardiovascular markers.",
+    price: 2699,
+    originalPrice: 5000,
+    discount: "46% OFF",
+    testsCount: 60,
+    tat: "Same Day (8-10h)",
     fasting: "10-12 Hours Fasting",
     sampleType: "Blood, Urine & ECG",
     popular: false,
-    colorScheme: "navy",
-    badge: "Comprehensive Care",
+    badge: "Complete Care",
     keyTests: [
-      "All 68 tests from Comprehensive Full Body",
-      "High-Sensitivity C-Reactive Protein (hs-CRP Cardiac)",
-      "Apolipoprotein A1 & B + Lipoprotein (a)",
-      "Serum Homocysteine (Cardiovascular Marker)",
-      "Pancreatic Amylase & Lipase Screen",
-      "Electrolytes Panel (Na, K, Cl, Ionic Calcium)",
-      "Digital Chest X-Ray & 12-Lead ECG",
-      "Urine Microalbumin/Creatinine Ratio",
-      "Dedicated Senior Physician Tele-Consultation"
+      "Complete Blood Count with ESR (24 Parameters)",
+      "Thyroid Profile Total (T3, T4, TSH)",
+      "Liver Function Test Complete (11 Parameters)",
+      "Renal Function Test with Electrolytes",
+      "Lipid Profile Extended (Cholesterol & Fractions)",
+      "HbA1c & Fasting Glucose",
+      "Computerized 12-Lead ECG",
+      "Urine Routine & Microscopic Examination",
+      "Priority Senior Doctor Consultation"
     ]
   }
 ];
 
 export const trustAccreditations = [
   {
-    id: "nabl",
-    title: "NABL Accredited",
-    code: "MC-2941 (ISO 15189:2012)",
-    description: "National Accreditation Board for Testing and Calibration Laboratories certified standard of analytical excellence.",
-    icon: "ShieldCheck"
+    id: "clinic-opd",
+    title: "Qualified Medical Doctors",
+    code: "Monday – Sunday 8:00 AM - 8:00 PM",
+    description: "Daily general physician OPD consultations and dedicated visiting specialist clinics.",
+    icon: "Stethoscope"
   },
   {
-    id: "iso",
-    title: "ISO 9001:2015",
-    code: "Quality Management Certified",
-    description: "Standardized operating workflows adhering to global healthcare quality management protocols.",
-    icon: "Award"
+    id: "lab-precision",
+    title: "Automated Laboratory",
+    code: "Monday – Sunday 7:30 AM - 5:30 PM",
+    description: "Quality diagnostic analyzers delivering reliable, rapid test results with digital reporting.",
+    icon: "Microscope"
   },
   {
-    id: "cold-chain",
-    title: "Smart Cold-Chain Logistics",
-    code: "2°C - 8°C Monitored",
-    description: "Insulated temperature-regulated sample containers with instant digital barcode verification.",
-    icon: "Thermometer"
+    id: "emergency-support",
+    title: "Mini Casualty & O2",
+    code: "Immediate First Aid & Oxygen",
+    description: "Observation beds, nebulization equipment, and immediate acute stabilization support.",
+    icon: "HeartPulse"
   },
   {
-    id: "automation",
-    title: "Fully Automated Analyzers",
-    code: "Beckman & Roche Platforms",
-    description: "Zero manual human transcription errors through direct bidirectional laboratory LIMS integration.",
-    icon: "Cpu"
+    id: "home-phlebotomy",
+    title: "Home Blood Collection",
+    code: "Aimcombu & Highway Corridor",
+    description: "Trained phlebotomists visiting homes with sterilized cold-carrier kits for elder care.",
+    icon: "Home"
   }
 ];
 
 export const patientReviews = [
   {
     id: 1,
-    name: "Dr. Arvind Mehta",
-    role: "Retired Professor, 64 yrs",
-    comment: "The phlebotomist was on time at 6:30 AM for the Executive Health package. Smooth venipuncture with zero bruising. I had the verified digital reports in my inbox by 4:00 PM.",
+    name: "Mathew Varghese",
+    role: "Aimcombu Resident, 58 yrs",
+    comment: "DiaMedicare is a blessing on the Pala-Thodupuzha Highway. The doctor listened patiently, and the lab reports were ready within 3 hours. Friendly and courteous staff!",
     rating: 5,
-    date: "10 Sep 2026",
-    packageUsed: "Executive Health Checkup",
+    date: "12 Sep 2026",
+    packageUsed: "Diabetic & Cardiac Wellness",
     verified: true
   },
   {
     id: 2,
-    name: "Sneha Mukherjee",
-    role: "Software Architect, 32 yrs",
-    comment: "AuraDiagnostics is leagues ahead of traditional diagnostic chains. The website is snappy, booking was a breeze, and the interactive report dashboard explained normal vs abnormal ranges clearly.",
+    name: "Ancy Joseph",
+    role: "Teacher, 39 yrs",
+    comment: "Called for home blood collection for my mother who is bedridden. The lab phlebotomist was on time at 7:30 AM, very gentle, and sent the reports directly to our WhatsApp.",
     rating: 5,
-    date: "04 Sep 2026",
-    packageUsed: "Comprehensive Full Body",
+    date: "06 Sep 2026",
+    packageUsed: "Home Blood Collection",
     verified: true
   },
   {
     id: 3,
-    name: "Rajeshwar Rao",
-    role: "Business Owner, 48 yrs",
-    comment: "Booked HbA1c and Lipid Profile for both my parents. The home sample collection service was exceptionally hygienic and polite. Highly recommended for senior care in the city.",
+    name: "Suresh Kumar P.",
+    role: "Business Owner, 46 yrs",
+    comment: "Had severe wheezing and visited their Mini Casualty. The O2 and nebulisation gave instant relief. Having pharmacy, lab, and clinic under one roof is super convenient.",
     rating: 5,
-    date: "28 Aug 2026",
-    packageUsed: "Home Sample Collection",
+    date: "29 Aug 2026",
+    packageUsed: "O2 + Nebulisation & O.P.",
     verified: true
   }
 ];
-

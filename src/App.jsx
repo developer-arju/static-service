@@ -93,18 +93,18 @@ export default function App() {
       {/* Mobile Floating Sticky Action Bar (visible on small screens) */}
       <div className="fixed bottom-0 inset-x-0 z-30 lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 flex items-center justify-between gap-2 shadow-2xl">
         <a
-          href="tel:+919876543210"
-          className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-slate-100 text-slate-800 font-semibold text-xs border border-slate-200"
+          href="tel:9072243372"
+          className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-slate-100 text-slate-800 font-bold text-xs border border-slate-200"
         >
-          <PhoneCall className="w-4 h-4 text-teal-700" />
+          <PhoneCall className="w-4 h-4 text-amber-600" />
           <span>Call</span>
         </a>
 
         <a
-          href="https://wa.me/919876543210?text=Hello%20AuraDiagnostics%2C%20I%20would%20like%20to%20book%20a%20test."
+          href="https://wa.me/919072243372?text=Hello%20DiaMedicare%2C%20I%20would%20like%20to%20enquire%20about%20a%20doctor%20consultation%20or%20lab%20test."
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-emerald-50 text-emerald-800 font-semibold text-xs border border-emerald-200"
+          className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-emerald-50 text-emerald-800 font-bold text-xs border border-emerald-200"
         >
           <MessageCircle className="w-4 h-4 text-emerald-600" />
           <span>WhatsApp</span>
@@ -112,10 +112,10 @@ export default function App() {
 
         <button
           onClick={() => handleOpenBooking()}
-          className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-teal-700 text-white font-semibold text-xs shadow-md"
+          className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-amber-500 text-slate-950 font-black text-xs shadow-md"
         >
           <Calendar className="w-4 h-4" />
-          <span>Book Test</span>
+          <span>Book Now</span>
         </button>
       </div>
 
