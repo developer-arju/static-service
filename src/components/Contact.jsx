@@ -33,10 +33,10 @@ export default function Contact() {
             <MapPin className="w-3.5 h-3.5 text-amber-400" />
             <span>CLINIC & LAB LOCATION</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
             Visit DiaMedicare in Aimcombu
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-600">
+          <p className="mt-3 text-xs sm:text-sm text-slate-600">
             Conveniently accessible right on the Pala-Thodupuzha Highway with dedicated parking and rapid outpatient reception.
           </p>
         </div>

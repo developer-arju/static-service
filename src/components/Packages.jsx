@@ -17,21 +17,21 @@ export default function Packages({ onSelectPackageForBooking }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold mb-2.5">
             <HeartPulse className="w-3.5 h-3.5 text-amber-600" />
             <span>Preventive Healthcare & Lab Checkups</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
             DiaMedicare Health Checkup Packages
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-600">
+          <p className="mt-2 text-xs sm:text-sm text-slate-600">
             Carefully curated diagnostic packages for early detection of diabetes, cholesterol abnormalities, kidney risks, and general vitality.
           </p>
         </div>
 
         {/* 3 Packages Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {healthPackages.map((pkg) => {
             const isPopular = pkg.popular;
             return (
@@ -39,15 +39,15 @@ export default function Packages({ onSelectPackageForBooking }) {
                 key={pkg.id}
                 className={`relative rounded-3xl transition-all duration-300 flex flex-col justify-between ${
                   isPopular 
-                    ? 'bg-white border-2 border-amber-500 shadow-xl shadow-amber-900/10 lg:-translate-y-3 z-10' 
+                    ? 'bg-white border-2 border-amber-500 shadow-xl shadow-amber-900/10 lg:-translate-y-2 z-10' 
                     : 'bg-white border border-slate-200 shadow-md hover:shadow-xl'
-                } p-6 sm:p-8`}
+                } p-5 sm:p-7`}
               >
                 {/* Popular Ribbon */}
                 {isPopular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-xs font-black uppercase tracking-wider py-1 px-4 rounded-full shadow-md flex items-center gap-1.5">
-                      <Sparkles className="w-3.5 h-3.5" />
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-[10px] sm:text-xs font-black uppercase tracking-wider py-1 px-3.5 rounded-full shadow-md flex items-center gap-1">
+                      <Sparkles className="w-3 h-3" />
                       {pkg.badge}
                     </span>
                   </div>
@@ -55,32 +55,32 @@ export default function Packages({ onSelectPackageForBooking }) {
 
                 <div>
                   {/* Top package info */}
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold text-slate-800 bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200">
+                  <div className="flex items-center justify-between mb-2.5">
+                    <span className="text-[11px] font-bold text-slate-800 bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200">
                       {pkg.testsCount} Parameters
                     </span>
-                    <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                    <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
                       {pkg.discount}
                     </span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-1">
+                  <h3 className="text-lg sm:text-xl font-black text-slate-900 mb-1">
                     {pkg.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-500 mb-6 leading-relaxed">
+                  <p className="text-xs text-slate-500 mb-5 leading-relaxed">
                     {pkg.subtitle}
                   </p>
 
                   {/* Pricing Box */}
-                  <div className="bg-slate-50 rounded-2xl p-4 mb-6 border border-slate-200/80">
+                  <div className="bg-slate-50 rounded-2xl p-3.5 mb-5 border border-slate-200/80">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-3xl sm:text-4xl font-black text-slate-900">
+                      <span className="text-2xl sm:text-3xl font-black text-slate-900">
                         ₹{pkg.price}
                       </span>
-                      <span className="text-sm text-slate-400 line-through">
+                      <span className="text-xs text-slate-400 line-through">
                         ₹{pkg.originalPrice}
                       </span>
-                      <span className="text-xs text-slate-500 font-medium ml-auto">
+                      <span className="text-[11px] text-slate-500 font-medium ml-auto">
                         All Taxes Incl.
                       </span>
                     </div>

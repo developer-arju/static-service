@@ -53,52 +53,52 @@ export default function Services({ onSelectTestForBooking }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-amber-400/40 text-amber-400 text-xs font-bold mb-3 shadow-sm">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-amber-400/40 text-amber-400 text-xs font-bold mb-2.5 shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
             <span>OUR SERVICES • ഞങ്ങളുടെ സേവനങ്ങൾ</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
             Complete Medical & Diagnostic Services
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-600">
+          <p className="mt-2 text-xs sm:text-sm text-slate-600">
             Dedicated outpatient care, diagnostic pathology, immediate casualty support, and pharmacy under one roof in Aimcombu.
           </p>
         </div>
 
         {/* 8 Core Service Cards Grid (Matching Poster) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16 sm:mb-20">
           {coreServices.map((service, idx) => {
             const Icon = getIcon(service.icon);
             return (
               <div 
                 key={service.id}
-                className="bg-slate-50 hover:bg-white rounded-3xl p-6 border border-slate-200/90 hover:border-amber-400 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                className="bg-slate-50 hover:bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 hover:border-amber-400 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-slate-900 text-amber-400 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors duration-200 flex items-center justify-center shadow-md border border-amber-500/30">
-                      <Icon className="w-6 h-6" />
+                  <div className="flex items-center justify-between mb-3.5">
+                    <div className="w-10 h-10 rounded-xl bg-slate-900 text-amber-400 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors duration-200 flex items-center justify-center shadow-md border border-amber-500/30">
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-200">
+                    <span className="text-[9px] sm:text-[10px] uppercase font-extrabold tracking-wider px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-200">
                       {service.badge}
                     </span>
                   </div>
 
                   <div className="mb-2">
-                    <h3 className="text-lg font-black text-slate-900 group-hover:text-amber-600 transition-colors leading-snug">
+                    <h3 className="text-base sm:text-lg font-black text-slate-900 group-hover:text-amber-600 transition-colors leading-snug">
                       {service.title}
                     </h3>
-                    <p className="text-xs font-bold text-amber-700 font-sans mt-0.5">
+                    <p className="text-[11px] sm:text-xs font-bold text-amber-700 font-sans mt-0.5">
                       {service.malayalamTitle}
                     </p>
                   </div>
 
-                  <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                  <p className="text-xs text-slate-600 leading-relaxed mb-3.5">
                     {service.description}
                   </p>
 
-                  <ul className="space-y-2 border-t border-slate-200/80 pt-3 mb-4">
+                  <ul className="space-y-1.5 border-t border-slate-200/80 pt-3 mb-4">
                     {service.highlights.map((item, hIdx) => (
                       <li key={hIdx} className="flex items-start gap-2 text-xs text-slate-700">
                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
@@ -110,10 +110,10 @@ export default function Services({ onSelectTestForBooking }) {
 
                 <button
                   onClick={() => onSelectTestForBooking(service.title)}
-                  className="mt-2 w-full py-2 px-3 rounded-xl bg-slate-200/70 group-hover:bg-amber-500 group-hover:text-slate-950 text-slate-800 text-xs font-bold transition-all duration-200 flex items-center justify-center gap-1.5"
+                  className="mt-1 w-full py-2 px-3 rounded-xl bg-slate-200/70 group-hover:bg-amber-500 group-hover:text-slate-950 text-slate-800 text-xs font-bold transition-all duration-200 flex items-center justify-center gap-1.5"
                 >
                   <span>Book / Enquire</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3 h-3" />
                 </button>
               </div>
             );
@@ -121,68 +121,68 @@ export default function Services({ onSelectTestForBooking }) {
         </div>
 
         {/* Malayalam Services Summary Banner (Exact from Poster) */}
-        <div className="bg-slate-900 text-slate-100 rounded-3xl p-8 sm:p-10 mb-20 border border-amber-500/30 shadow-xl">
-          <div className="text-center max-w-2xl mx-auto mb-8">
-            <div className="flex items-center justify-center gap-2 text-amber-400 font-bold text-xl sm:text-2xl">
+        <div className="bg-slate-900 text-slate-100 rounded-3xl p-6 sm:p-8 mb-16 sm:mb-20 border border-amber-500/30 shadow-xl">
+          <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
+            <div className="flex items-center justify-center gap-2 text-amber-400 font-bold text-lg sm:text-xl">
               <span>🌿</span>
               <span>ഞങ്ങളുടെ സേവനങ്ങൾ</span>
               <span>🌿</span>
             </div>
-            <p className="text-xs text-slate-400 mt-1">
+            <p className="text-[11px] sm:text-xs text-slate-400 mt-1">
               ഏയിംകൊമ്പ്, പാലാ - തൊടുപുഴ ഹൈവേ | ഫോൺ: 9072243372, 9072243991
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center sm:text-left">
-            <div className="p-3 bg-slate-800/80 rounded-2xl border border-slate-700/60">
-              <p className="text-xs text-amber-400 font-bold mb-1">01. കൺസൾട്ടേഷൻ</p>
-              <p className="text-sm font-bold text-white">ഡോക്ടർ സേവനങ്ങൾ</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-center sm:text-left">
+            <div className="p-2.5 sm:p-3 bg-slate-800/80 rounded-xl border border-slate-700/60">
+              <p className="text-[10px] sm:text-[11px] text-amber-400 font-bold mb-0.5">01. കൺസൾട്ടേഷൻ</p>
+              <p className="text-xs sm:text-sm font-bold text-white">ഡോക്ടർ സേവനങ്ങൾ</p>
             </div>
-            <div className="p-3 bg-slate-800/80 rounded-2xl border border-slate-700/60">
-              <p className="text-xs text-amber-400 font-bold mb-1">02. ഒ. പി.</p>
-              <p className="text-sm font-bold text-white">ഒ. പി. സേവനങ്ങൾ</p>
+            <div className="p-2.5 sm:p-3 bg-slate-800/80 rounded-xl border border-slate-700/60">
+              <p className="text-[10px] sm:text-[11px] text-amber-400 font-bold mb-0.5">02. ഒ. പി.</p>
+              <p className="text-xs sm:text-sm font-bold text-white">ഒ. പി. സേവനങ്ങൾ</p>
             </div>
-            <div className="p-3 bg-slate-800/80 rounded-2xl border border-slate-700/60">
-              <p className="text-xs text-amber-400 font-bold mb-1">03. കാഷ്വാലിറ്റി</p>
-              <p className="text-sm font-bold text-white">മിനി കാഷ്വാലിറ്റി</p>
+            <div className="p-2.5 sm:p-3 bg-slate-800/80 rounded-xl border border-slate-700/60">
+              <p className="text-[10px] sm:text-[11px] text-amber-400 font-bold mb-0.5">03. കാഷ്വാലിറ്റി</p>
+              <p className="text-xs sm:text-sm font-bold text-white">മിനി കാഷ്വാലിറ്റി</p>
             </div>
-            <div className="p-3 bg-slate-800/80 rounded-2xl border border-slate-700/60">
-              <p className="text-xs text-amber-400 font-bold mb-1">04. ലാബ് ടെസ്റ്റ്</p>
-              <p className="text-sm font-bold text-white">മെഡിക്കൽ ലാബ്</p>
+            <div className="p-2.5 sm:p-3 bg-slate-800/80 rounded-xl border border-slate-700/60">
+              <p className="text-[10px] sm:text-[11px] text-amber-400 font-bold mb-0.5">04. ലാബ് ടെസ്റ്റ്</p>
+              <p className="text-xs sm:text-sm font-bold text-white">മെഡിക്കൽ ലാബ്</p>
             </div>
-            <div className="p-3 bg-slate-800/80 rounded-2xl border border-slate-700/60">
-              <p className="text-xs text-amber-400 font-bold mb-1">05. മരുന്നുകൾ</p>
-              <p className="text-sm font-bold text-white">ക്ലിനിക്കൽ ഫാർമസി</p>
+            <div className="p-2.5 sm:p-3 bg-slate-800/80 rounded-xl border border-slate-700/60">
+              <p className="text-[10px] sm:text-[11px] text-amber-400 font-bold mb-0.5">05. മരുന്നുകൾ</p>
+              <p className="text-xs sm:text-sm font-bold text-white">ക്ലിനിക്കൽ ഫാർമസി</p>
             </div>
-            <div className="p-3 bg-slate-800/80 rounded-2xl border border-slate-700/60">
-              <p className="text-xs text-amber-400 font-bold mb-1">06. ഹൃദയ പരിശോധന</p>
-              <p className="text-sm font-bold text-white">ഇ.സി.ജി. (ECG)</p>
+            <div className="p-2.5 sm:p-3 bg-slate-800/80 rounded-xl border border-slate-700/60">
+              <p className="text-[10px] sm:text-[11px] text-amber-400 font-bold mb-0.5">06. ഹൃദയ പരിശോധന</p>
+              <p className="text-xs sm:text-sm font-bold text-white">ഇ.സി.ജി. (ECG)</p>
             </div>
-            <div className="p-3 bg-slate-800/80 rounded-2xl border border-slate-700/60">
-              <p className="text-xs text-amber-400 font-bold mb-1">07. ശ്വാസകോശ പരിചരണം</p>
-              <p className="text-sm font-bold text-white">ഓക്സിജൻ നെബുലൈസേഷൻ</p>
+            <div className="p-2.5 sm:p-3 bg-slate-800/80 rounded-xl border border-slate-700/60">
+              <p className="text-[10px] sm:text-[11px] text-amber-400 font-bold mb-0.5">07. ശ്വാസകോശ പരിചരണം</p>
+              <p className="text-xs sm:text-sm font-bold text-white">ഓക്സിജൻ നെബുലൈസേഷൻ</p>
             </div>
-            <div className="p-3 bg-slate-800/80 rounded-2xl border border-slate-700/60">
-              <p className="text-xs text-amber-400 font-bold mb-1">08. ഹോം കളക്ഷൻ</p>
-              <p className="text-sm font-bold text-white">ഹോം ബ്ലഡ് കളക്ഷൻ</p>
+            <div className="p-2.5 sm:p-3 bg-slate-800/80 rounded-xl border border-slate-700/60">
+              <p className="text-[10px] sm:text-[11px] text-amber-400 font-bold mb-0.5">08. ഹോം കളക്ഷൻ</p>
+              <p className="text-xs sm:text-sm font-bold text-white">ഹോം ബ്ലഡ് കളക്ഷൻ</p>
             </div>
           </div>
         </div>
 
         {/* Interactive Search Catalog for Medical Lab Tests */}
-        <div id="test-catalog" className="bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-sm">
+        <div id="test-catalog" className="bg-slate-50 rounded-3xl p-5 sm:p-8 border border-slate-200/90 shadow-sm">
           
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
             <div>
-              <h3 className="text-2xl font-black text-slate-900">
+              <h3 className="text-xl sm:text-2xl font-black text-slate-900">
                 Medical Lab Tests & Pricing
               </h3>
-              <p className="text-xs sm:text-sm text-slate-500 mt-1">
-                Lab Hours: <strong>7:30 AM – 5:30 PM</strong> (Monday – Sunday) • Home collection available
+              <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
+                Lab Hours: <strong>7:30 AM – 5:30 PM</strong> (Monday – Sunday) • Doorstep collection available
               </p>
             </div>
 
-            <span className="text-xs font-bold text-slate-700 bg-white px-3 py-1.5 rounded-xl border border-slate-200 self-start sm:self-auto">
+            <span className="text-[11px] font-bold text-slate-700 bg-white px-2.5 py-1 rounded-lg border border-slate-200 self-start sm:self-auto">
               Same-Day Fast Reporting
             </span>
           </div>

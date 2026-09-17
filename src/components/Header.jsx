@@ -123,14 +123,14 @@ export default function Header({ onOpenBooking }) {
 
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 font-sans">
+                <span className="text-lg sm:text-xl font-black tracking-tight text-slate-900 font-sans">
                   DIAMEDICARE
                 </span>
-                <span className="bg-amber-100 text-amber-900 text-[10px] font-extrabold px-2 py-0.5 rounded-full border border-amber-300 tracking-wider">
+                <span className="bg-amber-100 text-amber-900 text-[9px] sm:text-[10px] font-extrabold px-2 py-0.5 rounded-full border border-amber-300 tracking-wider">
                   CLINIC & LAB
                 </span>
               </div>
-              <p className="text-[11px] text-slate-600 font-bold uppercase tracking-wider flex items-center gap-1.5">
+              <p className="text-[10px] sm:text-[11px] text-slate-600 font-bold uppercase tracking-wider flex items-center gap-1.5">
                 <span>MEDICAL CENTRE & DIAGNOSTICS</span>
                 <span className="text-emerald-600 text-xs">🌿</span>
               </p>
@@ -144,7 +144,7 @@ export default function Header({ onOpenBooking }) {
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="px-3.5 py-2 text-sm font-semibold text-slate-700 hover:text-amber-600 hover:bg-amber-50/60 rounded-xl transition-all duration-200"
+                className="px-3 py-1.5 text-xs sm:text-[13px] font-semibold text-slate-700 hover:text-amber-600 hover:bg-amber-50/60 rounded-xl transition-all duration-200"
               >
                 {link.label}
               </a>
@@ -155,9 +155,9 @@ export default function Header({ onOpenBooking }) {
           <div className="hidden lg:flex items-center gap-3">
             <button
               onClick={() => onOpenBooking()}
-              className="flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold text-sm px-4 py-2.5 rounded-xl shadow-md shadow-amber-500/20 transition-all duration-200 hover:-translate-y-0.5"
+              className="flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold text-xs px-3.5 py-2 rounded-xl shadow-md shadow-amber-500/20 transition-all duration-200 hover:-translate-y-0.5"
             >
-              <Calendar className="w-4 h-4" />
+              <Calendar className="w-3.5 h-3.5" />
               <span>Book Appointment / Lab</span>
             </button>
           </div>

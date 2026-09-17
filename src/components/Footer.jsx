@@ -40,7 +40,7 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <span className="text-xl font-black tracking-tight text-white block">
+                <span className="text-lg sm:text-xl font-black tracking-tight text-white block">
                   DIAMEDICARE
                 </span>
                 <span className="text-[10px] font-bold text-amber-400 tracking-wider uppercase">

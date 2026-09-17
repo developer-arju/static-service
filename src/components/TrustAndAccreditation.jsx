@@ -27,36 +27,36 @@ export default function TrustAndAccreditation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-900 text-xs font-bold mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-900 text-xs font-bold mb-2.5">
             <Sparkles className="w-3.5 h-3.5 text-amber-600" />
             <span>Why Choose DiaMedicare</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
             Caring, Community-Focused Healthcare
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-600">
+          <p className="mt-2 text-xs sm:text-sm text-slate-600">
             Conveniently situated at Aimcombu on the Pala-Thodupuzha Highway to serve families with reliable medical attention and diagnostic accuracy.
           </p>
         </div>
 
         {/* 4 Pillars Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16 sm:mb-20">
           {trustAccreditations.map((item) => {
             const Icon = getAccreditationIcon(item.icon);
             return (
               <div
                 key={item.id}
-                className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-amber-400 transition-all hover:shadow-md flex flex-col justify-between"
+                className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 hover:border-amber-400 transition-all hover:shadow-md flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-slate-900 text-amber-400 flex items-center justify-center mb-4 shadow-sm border border-amber-500/30">
-                    <Icon className="w-6 h-6" />
+                  <div className="w-10 h-10 rounded-xl bg-slate-900 text-amber-400 flex items-center justify-center mb-3 shadow-sm border border-amber-500/30">
+                    <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="font-bold text-slate-900 text-lg mb-1">
+                  <h3 className="font-bold text-slate-900 text-base mb-1">
                     {item.title}
                   </h3>
-                  <span className="inline-block text-[11px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 mb-3">
+                  <span className="inline-block text-[10px] sm:text-[11px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 mb-2.5">
                     {item.code}
                   </span>
                   <p className="text-xs text-slate-600 leading-relaxed">

@@ -91,10 +91,10 @@ export default function EnquiryForm({ prefilledTest, onClearPrefilled }) {
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
             <span>Appointment & Home Blood Collection</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
             Book a Doctor or Diagnostic Service
           </h2>
-          <p className="mt-3 text-base text-slate-600 max-w-xl mx-auto">
+          <p className="mt-3 text-sm text-slate-600 max-w-xl mx-auto">
             Schedule an OPD visit, book medical laboratory tests, or request doorstep blood collection in Aimcombu and nearby Pala-Thodupuzha areas.
           </p>
         </div>

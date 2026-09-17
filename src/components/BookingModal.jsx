@@ -163,7 +163,7 @@ export default function BookingModal({ isOpen, onClose, defaultTest }) {
                 <Calendar className="w-3.5 h-3.5" />
                 <span>DiaMedicare Quick Booking</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-black text-slate-900">
+              <h3 className="text-lg sm:text-xl font-black text-slate-900">
                 Schedule Service or Lab Test
               </h3>
               <p className="text-xs text-slate-500 mt-0.5">
